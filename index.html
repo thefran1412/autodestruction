@@ -10,26 +10,28 @@
 <div class="container">
 	<h1>Destrucció</h1>
 	
-	<div class="activate"></div>
-	<div class="counter">
-		<p class="Timer">30:00</p>
+	<div class="activate">
+		<button type="button" class="btn btn-danger" onclick="activate();">Autodestruir</button>
 	</div>
-	<div class="code">
+	<div class="counter" hidden>
+		<p class="Timer">29:59</p>
+	</div>
+	<div class="code" hidden>
 		<div>
 			<input type="number" name="" class="form-control" min="100" max="999">
-			<button type="button" class="btn">Validar</button>
+			<button type="button" class="btn" onclick="validate(0, $(this).parent().children('.form-control').val())">Validar</button>
 		</div>
 		<div>
 			<input type="number" name="" class="form-control" min="100" max="999">
-			<button type="button" class="btn">Validar</button>
+			<button type="button" class="btn" onclick="validate(1, $(this).parent().children('.form-control').val())">Validar</button>
 		</div>
 		<div>
 			<input type="number" name="" class="form-control" min="100" max="999">
-			<button type="button" class="btn">Validar</button>
+			<button type="button" class="btn" onclick="validate(2, $(this).parent().children('.form-control').val())">Validar</button>
 		</div>
 		<div>
 			<input type="number" name="" class="form-control" min="100" max="999">
-			<button type="button" class="btn">Validar</button>
+			<button type="button" class="btn" onclick="validate(3, $(this).parent().children('.form-control').val())">Validar</button>
 		</div>
 	</div>
 </div>
