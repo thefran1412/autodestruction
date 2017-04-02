@@ -1,0 +1,30 @@
+.form-control{
+	width: 70px;
+}
+.code div, .code button, .code input{
+	display: inline-block;
+}
+.code div{
+	min-width: 100px;
+	padding: 10px;
+}
+body{
+	background-color: #233142;
+}
+h1{
+	color: #E3E3E3;
+}
+.container{
+	/*background-color: #455D7A;*/
+	text-align: center;
+}
+.counter{
+	color: #F95959;
+	font-size: 60px;
+	 
+}
+.counter p {
+	display: block;
+}
+
+/* RED: #F95959 */
