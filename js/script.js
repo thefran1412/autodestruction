@@ -4,7 +4,7 @@ var values = [472, 381, 539, 607];
 
 var verified = [false, false, false, false];
 
-var diff = 1;
+var diff = 20;
 
 var end = new Date(start.getTime() + diff*60000);
 
@@ -44,7 +44,13 @@ function activate(argument) {
 
 function destruct(argument) {
 	clearInterval(interval);
-	alert('codi correcte, iniciant la autodestruccio');
+
+	// alert('codi correcte, iniciant la autodestruccio');
+	$('.counter').hide();
+	$('.code').hide();
+
+	$('.end').show();
+	move();
 }
 
 
@@ -87,6 +93,9 @@ function isDone() {
 }
 
 function reset() {
+	
+	verified = [false, false, false, false];
+
 	$(".form-control").each(function( index ) {
 		//reset father's style
 		$(this).parent().removeClass();
@@ -106,7 +115,7 @@ function login() {
 		$('.login').hide();
 		$('.activate').show();
 		console.log('logged in correctly');
-		$('.username').parent().removeClass();
+		$('.username').parent().removeClass('has-error');
 		$('.username').parent().find('.btn').removeClass('btn-danger');
 	}
 	else{
@@ -114,6 +123,43 @@ function login() {
 		$('.username').parent().addClass('has-error');
 		$('.username').parent().find('.btn').addClass('btn-danger');
 	}
+}
+function move() {
+
+    var width = 1;
+    var id = setInterval(frame, 100);
+    function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+        } else {
+            width++;
+            $('#myBar').css('width', width + '%')
+            $('.progress-bar').text(width + '%');
+        }
+    }
+
+    var font = setTimeout(function () {
+    	$('body').css("font-family", '"Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace');
+    	clearInterval(font);
+    }, 8500);
+
+    var color = setTimeout(function () {
+    	$('h2').css("color", 'white');
+    	$('body').css("background-color", '#232323');
+    	$('#myBar').css("background-color", 'white');
+    	$('#myBar p').css("color", 'black');
+    	$('.progress-bar').removeClass('progress-bar');
+    	$('.progress').removeClass('progress');
+   		clearInterval(color);
+    }, 8800);
+
+    var black = setTimeout(function () {
+		$('.end').hide();
+    	$('body').css("background-color", 'black');
+		clearInterval(black);
+    }, 10000);
+
+    
 }
 
 /*

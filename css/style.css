@@ -47,6 +47,17 @@ h1{
 }
 
 
+/*#myProgress {
+    width: 100%;
+    background-color: grey;
+}*/
+.end h2{
+	color: #F95959;
+}
+#myBar {
+    background-color: #F95959;
+}
+
 
 
 
