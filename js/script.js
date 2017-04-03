@@ -100,3 +100,25 @@ function reset() {
 		$('.Timer').text('29:59');
 	});
 }
+
+function login() {
+	if ($('.username').val() == 'aortega.inditoxic' && $('.password').val() == '01102007') {
+		$('.login').hide();
+		$('.activate').show();
+		console.log('logged in correctly');
+		$('.username').parent().removeClass();
+		$('.username').parent().find('.btn').removeClass('btn-danger');
+	}
+	else{
+		console.log('autentification failed');
+		$('.username').parent().addClass('has-error');
+		$('.username').parent().find('.btn').addClass('btn-danger');
+	}
+}
+
+/*
+
+username: aortega.inditoxic
+pwd: 01102007
+
+*/

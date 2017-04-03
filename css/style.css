@@ -35,4 +35,19 @@ h1{
 	width: 125px;
 }
 
+.login{
+	text-align: center;
+	align-content: center;
+}
+
+.login input{
+	margin: 10px auto;
+	display: block;
+	width: 200px;
+}
+
+
+
+
+
 /* RED: #F95959 */

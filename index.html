@@ -6,13 +6,17 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
 <div class="container">
 	<div class="zoom">
-		<h1>Panell de control</h1>
+		<div class="login">
+			<h1>Login</h1>
+			<input type="text" name="username" class="form-control username" placeholder="Usuari">
+			<input type="password" name="password" class="form-control password" placeholder="Contrasenya">
+			<button type="button" class="btn" onclick="login();">Login</button>
+		</div>
 		
-		<div class="activate">
-	
+		<div class="activate" hidden>
+			<h1>Panell de control</h1>
 			<button type="button" class="btn btn-success">On</button>
 			<button type="button" class="btn">Treure Energia</button>
 			<button type="button" class="btn">Estadístiques</button>
