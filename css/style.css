@@ -11,6 +11,9 @@
 body{
 	background-color: #233142;
 }
+.zoom{
+	zoom: 240%;
+}
 h1{
 	color: #E3E3E3;
 }
@@ -25,6 +28,11 @@ h1{
 }
 .counter p {
 	display: block;
+}
+
+.activate button{
+	margin: 20px 5px;
+	width: 125px;
 }
 
 /* RED: #F95959 */
